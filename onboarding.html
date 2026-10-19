@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sprout: first 5 onboarding screens</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<p class="risk" role="note">Mutual fund investments are subject to market risks. Read all scheme-related documents carefully. Returns are not guaranteed.</p>
+<div class="wrap">
+  <nav class="nav"><a class="logo" href="index.html">Sprout</a><a href="index.html">← Back to homepage</a></nav>
+  <h1 style="font-size:1.6rem;margin:0 0 4px">App onboarding: the first 5 screens</h1>
+  <p style="color:var(--muted);margin:0 0 16px">The story continues from the homepage: same promise ("about 5 minutes"), same checklist, same mascot. Scroll sideways on a phone.</p>
+  <div class="phones">
+
+    <div>
+    <section class="phone" aria-label="Screen 1">
+      <div class="bar"><span>9:41</span><span>Step 1 of 5</span></div>
+      <div class="progress" aria-label="Step 1 of 5"><i class="on"></i><i></i><i></i><i></i><i></i></div>
+      <svg class="ankur" style="width:64px;height:64px" viewBox="0 0 120 120" role="img" aria-label="Ankur, the Sprout seedling"><ellipse cx="60" cy="104" rx="34" ry="8" fill="#e7f3ec"/><path d="M60 104 V70" stroke="#0b5d3b" stroke-width="6" stroke-linecap="round"/><g class="leaf"><path d="M60 72 C 34 70, 26 46, 30 30 C 50 30, 62 48, 60 72 Z" fill="#0b5d3b"/><path d="M60 64 C 82 62, 94 42, 92 26 C 72 26, 58 40, 60 64 Z" fill="#2e9a63"/></g><circle cx="52" cy="88" r="3" fill="#14213d"/><circle cx="68" cy="88" r="3" fill="#14213d"/></svg>
+      <h2>Before we start, keep these 3 things nearby</h2>
+      <p>This saves you from stopping halfway. It takes about 5 minutes in total.</p>
+      <div class="check">🪪 <span><b>PAN card</b><br><small>Needed by law for investing</small></span></div>
+      <div class="check">📱 <span><b>Aadhaar-linked mobile</b><br><small>We send an OTP to it</small></span></div>
+      <div class="check">🏦 <span><b>Bank account in your name</b></span></div>
+      <div class="grow"></div>
+      <a class="btn btn-primary" href="#s2">I have them, continue</a>
+      <a class="btn btn-ghost" style="margin-top:8px" href="#s1">Remind me later</a>
+    </section>
+    <p class="caption"><b>Fixes:</b> "I didn't know I needed PAN and Aadhaar". The homepage checklist is repeated before any form, and users can leave and get a reminder instead of failing at step 3.</p>
+    </div>
+
+    <div id="s2">
+    <section class="phone" aria-label="Screen 2">
+      <div class="bar"><span>9:42</span><span>Step 2 of 5</span></div>
+      <div class="progress" aria-label="Step 2 of 5"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div>
+      <h2>Verify your phone</h2>
+      <p>We'll send a 6-digit code. Use the number linked to your Aadhaar.</p>
+      <label class="field" for="m">Mobile number</label>
+      <input class="input" id="m" inputmode="numeric" value="+91 98220 01100">
+      <label class="field" for="otp">Enter code</label>
+      <input class="input" id="otp" inputmode="numeric" placeholder="6-digit code" autocomplete="one-time-code">
+      <p><small>Didn't get it? Resend in 0:24</small></p>
+      <div class="grow"></div>
+      <a class="btn btn-primary" href="#s3">Verify</a>
+    </section>
+    <p class="caption">One field per decision, a 48px tall input, and the number auto-fills from SMS. It's quick on low-cost Android phones.</p>
+    </div>
+
+    <div id="s3">
+    <section class="phone" aria-label="Screen 3">
+      <div class="bar"><span>9:43</span><span>Step 3 of 5</span></div>
+      <div class="progress" aria-label="Step 3 of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div>
+      <h2>Add your PAN</h2>
+      <p>We check it with the Income Tax Department to confirm it's you.</p>
+      <label class="field" for="pan">PAN number</label>
+      <input class="input" id="pan" value="ABCPP1234K" style="text-transform:uppercase">
+      <label class="field" for="dob">Date of birth (as on PAN)</label>
+      <input class="input" id="dob" value="12 / 06 / 2003">
+      <p><small>🔒 Used only for KYC. We never share it for marketing.</small></p>
+      <div class="grow"></div>
+      <a class="btn btn-primary" href="#s4">Check PAN</a>
+    </section>
+    <p class="caption">This is where 62% drop off. It explains <i>why</i> PAN is needed, asks for only 2 fields, and says how the data is used.</p>
+    </div>
+
+    <div id="s4">
+    <section class="phone" aria-label="Screen 4">
+      <div class="bar"><span>9:44</span><span>Step 4 of 5</span></div>
+      <div class="progress" aria-label="Step 4 of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
+      <svg class="ankur" style="width:64px;height:64px" viewBox="0 0 120 120" role="img" aria-label="Ankur, the Sprout seedling"><ellipse cx="60" cy="104" rx="34" ry="8" fill="#e7f3ec"/><path d="M60 104 V70" stroke="#0b5d3b" stroke-width="6" stroke-linecap="round"/><g class="leaf"><path d="M60 72 C 34 70, 26 46, 30 30 C 50 30, 62 48, 60 72 Z" fill="#0b5d3b"/><path d="M60 64 C 82 62, 94 42, 92 26 C 72 26, 58 40, 60 64 Z" fill="#2e9a63"/></g><circle cx="52" cy="88" r="3" fill="#14213d"/><circle cx="68" cy="88" r="3" fill="#14213d"/></svg>
+      <h2>Checking your details. This usually takes under a minute.</h2>
+      <div class="wait" role="status" aria-live="polite">
+        <div class="bar-fill"><span></span></div>
+        <ol>
+          <li class="done">PAN matched ✓</li>
+          <li class="now">Confirming Aadhaar with UIDAI…</li>
+          <li>Creating your investor account</li>
+        </ol>
+      </div>
+      <p style="margin-top:12px">You can close the app. We'll send a notification as soon as it's done.</p>
+      <div class="grow"></div>
+      <a class="btn btn-primary" href="#s5">Explore funds while you wait</a>
+    </section>
+    <p class="caption"><b>Fixes:</b> "the app asked me to wait and I thought it crashed". It shows real steps, moving progress and a time estimate, and lets people leave safely instead of a blank spinner.</p>
+    </div>
+
+    <div id="s5">
+    <section class="phone" aria-label="Screen 5">
+      <div class="bar"><span>9:46</span><span>Step 5 of 5</span></div>
+      <div class="progress" aria-label="Step 5 of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
+      <h2>You're verified. Make your first investment.</h2>
+      <p>A starter fund that spreads your money across many companies. You can pause or withdraw any time.</p>
+      <div class="amounts"><button>₹100</button><button class="on">₹500</button><button>₹1,000</button></div>
+      <div class="check"><span><b>Nifty 50 Index Fund</b><br><small>Market-linked · Value can go down as well as up</small></span></div>
+      <div class="grow"></div>
+      <a class="btn btn-primary" href="index.html">Invest ₹500</a>
+      <p class="disclaimer">Mutual fund investments are subject to market risks. Read all scheme-related documents carefully.</p>
+    </section>
+    <p class="caption">The first investment is small and reversible, with the risk shown next to the button. Copy never says "safe" or "guaranteed".</p>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
